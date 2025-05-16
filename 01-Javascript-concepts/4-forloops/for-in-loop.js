@@ -33,7 +33,7 @@ const socialObjects = [
   { name: 'P', url: 'https://p.com' },
 ];
 
-socialObjects.forEach(item => console.log(item.url));
+socialObjects.forEach((item) => console.log(item.url));
 
 //Filter
 
@@ -163,18 +163,18 @@ const companies = [
 
 // Get Semiconductor companies
 
-const semiconductorCompanies = companies.filter(c => c.category === 'Semiconductor');
+const semiconductorCompanies = companies.filter((c) => c.category === 'Semiconductor');
 
 // console.log(semiconductorCompanies);
 
 // get the companies that start and end
 
 const earlyCompanies = companies.filter(
-  c => c.startDate >= '2024-01-01' && c.endDate === '2024-06-30'
+  (c) => c.startDate >= '2024-01-01' && c.endDate === '2024-06-30'
 );
 console.log(earlyCompanies);
 
-const longCompanies = companies.filter(c => c.endDate - c.startDate === 1);
+const longCompanies = companies.filter((c) => c.endDate - c.startDate === 1);
 
 console.log(longCompanies);
 
