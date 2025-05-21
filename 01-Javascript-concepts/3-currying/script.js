@@ -66,7 +66,7 @@ function curry(fn) {
   };
 }
 
-const sum = (a, b, c) => a + b + c;
+const sum = (a, b, c, d) => a + b + c + d;
 
 const totalSum = curry(sum);
 
