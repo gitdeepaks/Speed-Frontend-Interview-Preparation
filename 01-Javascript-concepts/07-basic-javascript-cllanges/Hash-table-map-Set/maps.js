@@ -18,4 +18,48 @@ const map2 = new Map([
 
 // get Values
 
-console.log(nameMap.get(1));
+console.log(map2.get(myfunction));
+console.log(map2.get(myObj));
+
+//set Values
+
+nameMap.set('4', 'Mike');
+nameMap.set('5', 'Sara');
+
+console.log(nameMap);
+
+// check values
+
+console.log(nameMap.has(1));
+console.log(nameMap.has(10));
+
+// Remove values
+
+nameMap.delete(1);
+console.log(nameMap.has(1));
+//get size
+console.log(nameMap.size);
+
+//iterating over
+
+for (const [key, value] of nameMap) {
+  console.log(key, value);
+}
+
+nameMap.forEach((value, key) =>
+  console.log({
+    value,
+    key,
+  })
+);
+
+//get Keys
+
+// console.log(nameMap, key());
+
+console.log(nameMap.values());
+
+//clear map
+
+nameMap.clear();
+console.log(nameMap.size);
