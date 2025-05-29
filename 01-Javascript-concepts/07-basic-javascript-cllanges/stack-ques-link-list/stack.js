@@ -1,4 +1,4 @@
-class Stack {
+export class Stack {
   constructor() {
     this.maxSize = 100;
     this.stack = [];
@@ -57,7 +57,6 @@ class Stack {
 }
 
 // Export the class so other files can use it
-module.exports = Stack;
 
 // Test the implementation
 const stack = new Stack();
