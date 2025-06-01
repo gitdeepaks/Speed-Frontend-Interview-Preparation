@@ -27,3 +27,10 @@ function breadthFirstTraversal(root) {
 
   return result;
 }
+
+let obj = {
+  a: 7,
+  name: 'Deepak',
+  bool: true,
+  arr: [6, 7, 8, 9, 10],
+};
