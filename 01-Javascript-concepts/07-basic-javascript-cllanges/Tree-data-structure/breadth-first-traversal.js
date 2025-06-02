@@ -1,36 +1,101 @@
-class Node {
-  constructor(data) {
-    this.data = data;
-    this.left = null;
-    this.right = null;
+// class Node {
+//   constructor(data) {
+//     this.data = data;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
+// function breadthFirstTraversal(root) {
+//   if (!root) return [];
+
+//   const result = [];
+//   const queue = [];
+//   queue.push(root);
+
+// //   while (queue.length > 0) {
+// //     const current = queue.shift();
+// //     result.push(current.data);
+
+// //     if (current.left) {
+// //       queue.push(current.left);
+// //     }
+// //     if (current.right) {
+// //       queue.push(current.right);
+// //     }
+// //   }
+
+// //   return result;
+// // }
+
+// // let obj = {
+// //   a: 7,
+// //   name: 'Deepak',
+// //   bool: true,
+// //   arr: [6, 7, 8, 9, 10],
+// // };
+
+// let arr = [10, 4, 5, 3, 6, 2, 8, 20];
+
+// console.log(arr.length);
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] % 2 === 1) {
+//     console.log(arr[i]);
+//   }
+// }
+
+// let i = 0;
+// while (i < 5) {
+//   console.log('Hello' + ' ' + i);
+
+//   i++;
+// }
+
+// Search an element in an array  and reruen the index if the element is not present then retuen -1
+
+// function searchElement(arr, x) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === x) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// let arr = [4, 2, 4, 5, 10, 40, 90, 30, 70];
+
+// let res = searchElement(arr, 3);
+
+// console.log(res);
+
+// function the that return the number of negative numbers in in an array
+
+function negativeNumbers(arr) {
+  let negativeCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      negativeCount++;
+    }
   }
+
+  return negativeCount;
 }
 
-function breadthFirstTraversal(root) {
-  if (!root) return [];
+let myArray = [0, 2, 4, 5, -1, -5, -6, -6];
 
-  const result = [];
-  const queue = [];
-  queue.push(root);
+const res = negativeNumbers(myArray);
+console.log(res);
 
-  while (queue.length > 0) {
-    const current = queue.shift();
-    result.push(current.data);
-
-    if (current.left) {
-      queue.push(current.left);
-    }
-    if (current.right) {
-      queue.push(current.right);
+function largest(arr) {
+  let largestNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i] + 1) {
+      return largestNum++;
     }
   }
 
-  return result;
+  return largestNum;
 }
 
-let obj = {
-  a: 7,
-  name: 'Deepak',
-  bool: true,
-  arr: [6, 7, 8, 9, 10],
-};
+largest(myArray);
