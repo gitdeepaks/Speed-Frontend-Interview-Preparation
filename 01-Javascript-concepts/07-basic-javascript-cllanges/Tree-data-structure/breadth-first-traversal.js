@@ -71,31 +71,82 @@
 
 // function the that return the number of negative numbers in in an array
 
-function negativeNumbers(arr) {
-  let negativeCount = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < 0) {
-      negativeCount++;
-    }
-  }
+// function negativeNumbers(arr) {
+//   let negativeCount = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < 0) {
+//       negativeCount++;
+//     }
+//   }
 
-  return negativeCount;
-}
+//   return negativeCount;
+// }
 
-let myArray = [0, 2, 4, 5, -1, -5, -6, -6];
+let myArray = [10, 20, 9, 8, 10, 7, 20];
 
-const res = negativeNumbers(myArray);
-console.log(res);
+// const res = negativeNumbers(myArray);
+// console.log(res);
 
 function largest(arr) {
-  let largestNum = 0;
+  let largestNum = -Infinity;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i] + 1) {
-      return largestNum++;
+    if (arr[i] > largestNum) {
+      largestNum = arr[i];
     }
   }
 
   return largestNum;
 }
 
-largest(myArray);
+function smallest(arr) {
+  let smallestNumber = Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallestNumber) {
+      smallestNumber = arr[i];
+    }
+  }
+
+  return smallestNumber;
+}
+
+function secondLargestNumber(arr) {
+  if (arr.length < 2) {
+    return null;
+  }
+  let firstLargest = -Infinity;
+  let secondLargest = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > firstLargest) {
+      secondLargest = firstLargest;
+      firstLargest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== firstLargest) {
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest;
+}
+
+const largestNumberResult = largest(myArray);
+const smallestNumberResult = smallest(myArray);
+const secondLargestNumberResult = secondLargestNumber(myArray);
+
+console.log({
+  largestNumberResult,
+  smallestNumberResult,
+  secondLargestNumberResult,
+});
+
+// Loop with in Loop
+for (let i = 5; i > 0; i--) {
+  for (let j = 0; j < i; j++) {
+    console.log(`i = ${i} , j = ${j} `);
+  }
+}
+
+for (let i = 0; i < 3; i++) {
+  console.log(`i= *`);
+  for (let j = i; j < 5; j++) {
+    console.log(` j= *`);
+  }
+}
