@@ -11,3 +11,5 @@ function reverseStrin(str) {
 
   return reversed;
 }
+
+console.log(reverseStrin('hello'));
