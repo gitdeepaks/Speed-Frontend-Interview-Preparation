@@ -99,32 +99,59 @@
 //   .catch(() => console.log())
 //   .finally(() => {});
 
-function orderFood(isResOpen) {
-  return new Promise((res, rej) => {
-    console.log('Placing Order');
-    setTimeout(() => {
-      if (isResOpen) {
-        res('Order Recieved');
-      } else {
-        rej('Order Closed');
-      }
-    }, 2000);
-  });
+// function orderFood(isResOpen) {
+//   return new Promise((res, rej) => {
+//     console.log('Placing Order');
+//     setTimeout(() => {
+//       if (isResOpen) {
+//         res('Order Recieved');
+//       } else {
+//         rej('Order Closed');
+//       }
+//     }, 2000);
+//   });
+// }
+
+// orderFood(false)
+//   .then((res) => {
+//     console.log(res);
+//     return ' Preparing Food';
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     return 'Out for Delivery';
+//   })
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((err) => console.log(err))
+//   .finally(() => {
+//     console.log('Thanks for using Swiggy!');
+//   });
+
+// Promise.all([]).then((users) => {
+//   console.log(users);
+// });
+// async function myFunc() {
+//   try {
+//     const res = await someTask();
+//     console.log(res);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
+
+async function fetchUserData() {
+  console.log('Fetching Data');
+  try {
+    const res = await fetch('https://dummyjson.com/recipes/search?q=');
+    const recipy = await res.json();
+    console.log(recipy.recipes.name);
+  } catch (error) {
+    console.log('failed to getch', error);
+  } finally {
+    console.log('Request  completed');
+  }
 }
 
-orderFood(false)
-  .then((res) => {
-    console.log(res);
-    return ' Preparing Food';
-  })
-  .then((res) => {
-    console.log(res);
-    return 'Out for Delivery';
-  })
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((err) => console.log(err))
-  .finally(() => {
-    console.log('Thanks for using Swiggy!');
-  });
+fetchUserData();
