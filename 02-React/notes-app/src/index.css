@@ -1,5 +1,5 @@
 @import 'tailwindcss';
 
 body {
-  @apply min-h-screen bg-gradient-to-br from-purple-400 via-pink-200 to-yellow-100 font-sans text-gray-800 p-4;
+  @apply min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-yellow-400 font-stretch-extra-condensed text-gray-800 p-4;
 }
