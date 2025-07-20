@@ -7,7 +7,7 @@ Create a new file at `src/pages/about.jsx` and add the following code:
 ```javascript
 const AboutPage = () => {
   return (
-    <div className='about'>
+    <div className="about">
       <h1>About Crypto Dash</h1>
       <p>
         Crypto Dash is a simple React application that displays live
@@ -43,7 +43,7 @@ Then add the route to the `Routes` component:
 ```javascript
 <Routes>
   <Route
-    path='/'
+    path="/"
     element={
       <HomePage
         coins={coins}
@@ -58,7 +58,7 @@ Then add the route to the `Routes` component:
       />
     }
   />
-  <Route path='/about' element={<AboutPage />} /> // Add this line
+  <Route path="/about" element={<AboutPage />} /> // Add this line
 </Routes>
 ```
 
@@ -73,9 +73,9 @@ import { Link } from 'react-router';
 
 const Header = () => {
   return (
-    <div className='top-nav'>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
+    <div className="top-nav">
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
     </div>
   );
 };
